@@ -11,7 +11,6 @@ function RandomStars({ hover }) {
     let random = Math.floor((Math.random() + 10) * 2);
     setStars(random);
   }
-  console.log(hover);
   return <>{hover ? <Stars star={star} /> : null}</>;
 }
 export default RandomStars;
