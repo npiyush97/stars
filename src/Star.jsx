@@ -1,10 +1,8 @@
 function Stars({ star }) {
   const randomMizer = () => Math.floor(Math.random() * 100);
-
-  function renderStars() {
-    const stars = [];
-    for (let i = 0; i < star; i++) {
-      stars.push(
+  return (
+    <>
+      {Array.from({ length: star }, (_, index) => (
         <div
           style={{
             top: `${randomMizer()}%`,
@@ -12,15 +10,12 @@ function Stars({ star }) {
             transform: `translate(-50%,-50%)`,
           }}
           className="child-stars"
-          key={i}
+          key={index}
         >
-          {i}
+          {index}
         </div>
-      );
-    }
-    return stars;
-  }
-
-  return <>{renderStars()}</>;
+      ))}
+    </>
+  );
 }
 export default Stars;
