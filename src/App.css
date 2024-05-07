@@ -1,4 +1,4 @@
-body{
+body {
   overflow: hidden;
 }
 .container {
@@ -14,11 +14,34 @@ body{
   height: 50px;
   border: 1px solid black;
   border-radius: 50%;
+  z-index: 1;
+  background-color: yellow;
 }
 .child-stars {
-  position:absolute;
+  position: absolute;
   width: 20px;
   height: 20px;
   border: 1px solid black;
   border-radius: 50%;
+  animation: loop 4s infinite linear;
+}
+@keyframes loop {
+  0% {
+    transform: translatex(0px) translatey(0px);
+  }
+  20% {
+    transform: translatex(100px) translatey(100px);
+  }
+  40% {
+    transform: translatex(100px) translatey(-100px);
+  }
+  60% {
+    transform: translatex(-100px) translatey(100px);
+  }
+  80% {
+    transform: translatex(-100px) translatey(-100px);
+  }
+  100% {
+    transform: translatex(0px) translatey(0px);
+  }
 }

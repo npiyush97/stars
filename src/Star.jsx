@@ -12,7 +12,7 @@ function Stars({ star }) {
           className="child-stars"
           key={index}
         >
-          {index}
+          {/* {index} */}
         </div>
       ))}
     </>
